@@ -925,7 +925,7 @@ function selectRecheioNum(n) {
   const sel = document.querySelectorAll('#recheio-chips .chip.selected');
   if (sel.length > n) {
     sel[sel.length - 1].classList.remove('selected');
-    order.bolo.recheios.pop();
+    const last = order.bolo.recheios.pop();
   }
   updateBoloPrice();
 }
