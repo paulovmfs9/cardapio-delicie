@@ -869,7 +869,7 @@ document.querySelectorAll('.flavor-chips .chip:not(.single)').forEach(chip => {
     const panelId = group.querySelector('.flavor-chips').id;
     this.classList.toggle('selected');
     // sync to order
-    const flavor = this.dataset.flavor;
+    const flavor = this.dataset.flavor || this.dataset.compl;
     if (panelId === 'trad-flavors') toggleFlavor(order.docinhos.trad.flavors, flavor);
     else if (panelId === 'med-flavors') toggleFlavor(order.docinhos.med.flavors, flavor);
     else if (panelId === 'prem-flavors') toggleFlavor(order.docinhos.prem.flavors, flavor);
