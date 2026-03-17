@@ -1022,7 +1022,10 @@ function goToPage2() {
 
 function goToPage3() {
   const nome = document.getElementById('clientName').value.trim();
-  const tel = document.getElementById('clientPhone').value.trim();
+  if (!tel.match(/^\(?\d{2}\)?\s?9?\d{4}-?\d{4}$/)) {
+  alert('Digite um WhatsApp válido! 📱');
+  return;
+}
   const data = document.getElementById('eventDate').value;
   if (!nome || !tel || !data) {
     alert('Por favor, preencha seu nome, WhatsApp e a data do evento! 🌸');
